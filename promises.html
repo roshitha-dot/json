@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p id="a"></p>
+    <script>
+     function display(sum){
+        document.getElementById("a").innerHTML=sum
+     }
+     function add(a,b){
+        var addition=a+b;
+        display(addition)
+     }
+     var mypromise=new Promise(function(myResolve,myReject){
+        var x=0;
+        if(x==0){
+            myResovle("ok")
+        }
+        else{
+            myReject("error")
+        }
+     })
+     mypromise.then(
+        function(value){
+            sum(3,7)
+        },
+        function(error){
+            sum(error)
+        }
+     )
+    </script>
+</body>
+</html>
